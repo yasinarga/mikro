@@ -1,0 +1,31 @@
+.logo-component {
+  text-align: center;
+  div:first-of-type {
+    max-height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  img {
+    max-height: inherit;
+    vertical-align: baseline;
+    margin-right: 10px;
+  }
+
+  span:first-of-type {
+    font-size: 55px;
+    color: #5F6368;
+    font-weight:500 ;
+  }
+  span:last-of-type {
+    font-size: 50px;
+    color: #63666A;
+    font-weight: 400;
+    align-self: flex-end;
+  }
+
+
+}

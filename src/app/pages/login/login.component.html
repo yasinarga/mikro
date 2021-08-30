@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-md-4 col-sm-12 col-12 m-auto mt-3 login-component">
+    <form novalidate [formGroup]="loginForm">
+      <app-logo [description]="'Google Maps\'e Hoşgeldiniz'"></app-logo>
+      <app-input  [text]="'Email'" [type]="'email'" [value]="loginForm['email']" (sendInputEmitter)="getValue($event)" [placeholder]="'Email adresinizi giriniz.'" [name]="'email'"></app-input>
+
+      <span *ngIf="email?.invalid" class="m-form__help text-danger">Geçerli bir email adresi giriniz.</span>
+
+      <app-input [text]="'Şifre'" [type]="'password'" [value]="loginForm['password']" (sendInputEmitter)="getValue($event)" [name]="'password'" [placeholder]="'******'"></app-input>
+      <span *ngIf="password?.invalid" class="m-form__help text-danger">Geçerli bir şifre giriniz.</span>
+
+      <div class="w-100 text-end mb-3">
+        <a routerLink="/forget-password" href="javascript:void(0)">Şifremi Unuttum </a>
+      </div>
+      <app-button [type]="'login'" [buttonName]="'Giriş Yap'" (clickButtonEmit)="buttonClickEvent($event)"></app-button>
+    </form>
+  </div>
+</div>

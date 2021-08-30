@@ -1,0 +1,6 @@
+<div class="mb-3">
+  <label [for]="'input_'+name" class="form-label w-100">
+    {{ text }}
+    <input [id]="'input_' + name" class="form-control" [type]="type" [(ngModel)]="value" [placeholder]="placeholder" (input)="sendMessage($event)">
+  </label>
+</div>

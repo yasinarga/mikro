@@ -1,0 +1,27 @@
+.user-list-component {
+
+ .block {
+   border-right: 1px solid #ececec;
+   .users {
+     display: flex;
+     margin-bottom: 1rem ;
+
+     .image {
+       align-self: center;
+       img {
+         border-radius: 50%;
+         box-shadow: 0 2px 5px;
+         width: 50px;
+       }
+     }
+
+     .title {
+       font-size: 1.25rem;
+       color: #3988FF;
+     }
+   }
+ }
+
+
+
+}

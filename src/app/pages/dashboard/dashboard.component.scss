@@ -1,0 +1,16 @@
+.dashboard-component {
+  .welcome-logo {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+  }
+}
+
+
+.head-logo {
+  max-height: 40px!important;
+}

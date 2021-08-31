@@ -1,12 +1,13 @@
 .logo-component {
   text-align: center;
-  div:first-of-type {
+  .head-logo {
     max-height: 60px;
     display: flex;
     flex-direction: row;
     align-content: center;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   img {

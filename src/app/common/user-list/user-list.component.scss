@@ -2,10 +2,17 @@
 
  .block {
    border-right: 1px solid #ececec;
+   max-height: 95vh;
+   overflow-y: scroll ;
    .users {
      display: flex;
      margin-bottom: 1rem ;
 
+     &:hover {
+       cursor: pointer;
+       background: #ececec;
+       border-radius: 10px;
+     }
      .image {
        align-self: center;
        img {
@@ -14,7 +21,6 @@
          width: 50px;
        }
      }
-
      .title {
        font-size: 1.25rem;
        color: #3988FF;

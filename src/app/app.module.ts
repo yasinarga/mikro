@@ -11,6 +11,7 @@ import { ForgetPasswordComponent } from './pages/forget-password/forget-password
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { UserListComponent } from './common/user-list/user-list.component';
 import { HttpClientModule } from "@angular/common/http";
+import { DetailComponent } from './pages/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HttpClientModule } from "@angular/common/http";
     LogoComponent,
     ForgetPasswordComponent,
     DashboardComponent,
-    UserListComponent
+    UserListComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,

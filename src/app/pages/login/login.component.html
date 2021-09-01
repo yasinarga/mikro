@@ -12,6 +12,9 @@
       <div class="w-100 text-end mb-3">
         <a routerLink="/forget-password" href="javascript:void(0)">Şifremi Unuttum </a>
       </div>
+
+      <span *ngIf="isCorrectInfo" class="m-form__help text-danger">Email veya Şifre hatalı.</span>
+
       <app-button [type]="'login'" [buttonName]="'Giriş Yap'" (clickButtonEmit)="buttonClickEvent($event)"></app-button>
     </form>
   </div>

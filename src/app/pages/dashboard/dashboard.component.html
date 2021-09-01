@@ -1,13 +1,15 @@
 <div class="col-lg-12 row h-100 dashboard-component">
-  <app-logo></app-logo>
-  <div class="col-lg-3">
-    <app-user-list [userList]="userList"></app-user-list>
+  <app-logo class="test" ></app-logo>
+  <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+    <app-user-list [userList]="userList" (clickUserEmitter)="clickedUser($event)"></app-user-list>
   </div>
-  <div class="col-lg-9">
-    <div class="welcome-logo">
+  <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+    <div *ngIf="!showDetail;else detailComponent" class="welcome-logo">
       <img src="assets/img/dashboard-logo.png">
     </div>
-
+    <ng-template #detailComponent>
+      <app-detail [userDetail]="selectedUser"></app-detail>
+    </ng-template>
   </div>
 </div>
 

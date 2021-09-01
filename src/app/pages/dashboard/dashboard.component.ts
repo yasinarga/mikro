@@ -9,6 +9,8 @@ import {HttpRequestService} from "../../services/http-request.service";
 export class DashboardComponent implements OnInit {
 
   userList = []
+  showDetail = false
+  selectedUser = []
 
   constructor(
     public httpService: HttpRequestService
@@ -19,6 +21,10 @@ export class DashboardComponent implements OnInit {
       this.userList = res.data;
     });
 
+  }
+  clickedUser(ev: any){
+    this.showDetail = true
+    this.selectedUser = ev
   }
 
 }

@@ -1,0 +1,32 @@
+<div class="row p-3">
+    <div class="col-md-5">
+        <p> <b>First Name:</b> {{ fullDetail.firstName}} </p>
+        <p> <b>Last Name:</b> {{ fullDetail.lastName}} </p>
+        <p> <b>Email:</b> {{ fullDetail.email}} </p>
+        <p> <b>Gender:</b> {{ fullDetail.gender.toUpperCase()}} </p>
+        <p> <b>Phone:</b> {{ fullDetail.phone}} </p>
+        <p> <b>BirthDay:</b> {{ fullDetail.dateOfBirth | date}} </p>
+        <p> <b>Register Date:</b> {{ fullDetail.registerDate | date}} </p>
+    </div>
+    <div class="col-md-4">
+
+        <img [src]="fullDetail.picture" width="200px">
+    </div>
+</div>
+
+
+<!--
+id: "60d0fe4f5311236168a109ca", title: "ms", firstName: "Sara", lastName: "Andersen",…}
+dateOfBirth: "1996-04-30T19:26:49.610Z"
+email: "sara.andersen@example.com"
+firstName: "Sara"
+gender: "female"
+id: "60d0fe4f5311236168a109ca"
+lastName: "Andersen"
+location: {street: "9614, SÃ¸ndermarksvej", city: "Kongsvinger", state: "Nordjylland", country: "Denmark",…}
+phone: "92694011"
+picture: "https://randomuser.me/api/portraits/women/58.jpg"
+registerDate: "2021-06-21T21:02:07.374Z"
+title: "ms"
+
+-->

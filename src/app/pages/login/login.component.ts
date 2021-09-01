@@ -15,7 +15,7 @@ import {LoginEnum} from "../../common/loginEnum";
 export class LoginComponent implements OnInit {
 
   public loginEnum = LoginEnum
-
+  isCorrectInfo = false
   loginForm: FormGroup ;
   emailPattern: any = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -36,7 +36,6 @@ export class LoginComponent implements OnInit {
   }
 
   getValue(val: any){
-    console.log(this.password)
     this.loginForm.get(val.name)?.setValue(val.value);
   }
 
@@ -47,6 +46,8 @@ export class LoginComponent implements OnInit {
   clickLoginButton(){
     if(this.password?.value === this.loginEnum.password && this.email?.value === this.loginEnum.email){
       this.router.navigateByUrl('dashboard');
+    } else {
+      this.isCorrectInfo = true
     }
   }
    get password() { return this.loginForm.get('password'); }

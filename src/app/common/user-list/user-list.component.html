@@ -1,7 +1,7 @@
 <div class="user-list-component">
   <h2>Kullanıcı Listesi</h2>
   <div *ngIf="userList.length" class="block">
-    <div *ngFor="let item of userList; index as i;" class="users">
+    <div *ngFor="let item of userList; index as i;" class="users" [ngClass]="{'selected' : item.id === selectedUser?.id }" (click)="clickUser(item)">
       <div class="image">
         <img [src]="item.picture" class="align-self-center">
       </div>
